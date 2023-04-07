@@ -1,0 +1,18 @@
+<div>
+  <h1 class="font-bold text-4xl">Main#profile</h1>
+  <p>Find me in app/views/main/profile.html.erb</p>
+
+  <% if logged_in? %>
+
+    <h1> Username: <%= current_user.username %></h1>
+    <h1> Phone number: <%= current_user.phone_number %></h1>
+    <h1> Date of birth: <%= current_user.date_birth %></h1>
+    <h1> Adress: <%= current_user.address%></h1>
+    <h1> Credits: <%= current_user.credit%></h1>
+    
+
+
+  <%end%>
+
+
+</div>
