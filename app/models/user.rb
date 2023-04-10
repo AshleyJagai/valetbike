@@ -2,16 +2,32 @@ class User < ApplicationRecord
     has_secure_password
 
     validates_presence_of :username
+
     validates_length_of :username, minimum: 1 
 
     validates_presence_of :password
 
     validates_presence_of :email
 
-    validates_presence_of :phone_number, minimum: 10
+    validates_presence_of :phone_number, minimum:10
 
-    validates_presence_of :credit
-    validates_numericality_of :credit, greater_than_or_equal_to: 0
+    validates_presence_of :date_birth
+
+    validate :validate_age
+
+    #private
+
+    # def validate_age
+    #   if date_birth.present? && date_birth > 18.years.ago.to_d
+    #       errors.add(:birth_date, 'You should be over 18 years old.')
+    #   end
+    # end
+
+    
+
+   
+    # validates_presence_of :credit
+    # validates_numericality_of :credit, greater_than_or_equal_to: 0
 
     #validates_
 
