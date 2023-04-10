@@ -5,12 +5,10 @@ class User < ApplicationRecord
     validates_length_of :username, minimum: 1 
 
     validates_presence_of :password
-    validates_length_of :username, minimum: 1 
 
     validates_presence_of :email
 
-    validates_presence_of :phone_number
-    validates_length_of :username, minimum: 10
+    validates_presence_of :phone_number, minimum: 10
 
     validates_presence_of :credit
     validates_numericality_of :credit, greater_than_or_equal_to: 0

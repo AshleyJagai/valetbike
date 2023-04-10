@@ -3,7 +3,7 @@ namespace :slurp2 do
   task bikes: :environment do
     require 'csv'    
 
-    csv_text = File.read('/mnt/c/Users/ariar/VALLEYSCOOT/valetbike/notes/bike-data.csv')
+    csv_text = File.read("/Users/ajagai/cs223/valetbike/notes/bike-data.csv")
     csv = CSV.parse(csv_text, :headers => true)
     csv.each do |row|
       bike = Bike.new 
