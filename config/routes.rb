@@ -27,16 +27,6 @@ Rails.application.routes.draw do
   resources :sessions, except: [:show]
   resources :main, except: [:show]
   
- 
-
-
-
-
-  
-
-
-  
- 
 
   # get 'main/menu'
   get 'main/help'

@@ -5,7 +5,6 @@
  Number of docks available: <%= @station.num_docks_available%> <br>
 
 
- 
  <% bikes = Bike.where(current_station_identifier: @station.identifier ) %>
  <%bikes.each do |bike| %>
   <br>

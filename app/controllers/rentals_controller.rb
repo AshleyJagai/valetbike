@@ -11,6 +11,10 @@ class RentalsController < ApplicationController
     # else
     #   render :new
     # end
+
+    def show 
+    
+    end 
     
 
     def create
@@ -18,11 +22,12 @@ class RentalsController < ApplicationController
         @rental = Rental.new(params.require(:rental).permit(:user_id, :bike_id, :start_station_id, :end_station_id, :end_time, :price, :start_time, :end_time ))
         if @rental.save 
             puts "saved"
-            redirect_to '/rentals/show' # this should actually go to the active ride page, just wanted somwhere random to send it for now 
+            redirect_to 'rental_path' # this should actually go to the active ride page, just wanted somwhere random to send it for now 
         else
             render('new') 
             puts "save failed"
         end
+
 
 
        #@rental = Rental.create(params.require(:user_id).permit(:user_id, :bike_id, :start_time, :start_station_id,))
@@ -34,5 +39,7 @@ class RentalsController < ApplicationController
          
 
     end
+
+
 
 end 
