@@ -14,7 +14,7 @@ class AddBikeAttributes < ActiveRecord::Migration[7.0]
      # 4 = missing 
      # 5 = other 
 
-    add_column :bikes, :status, :integer
+     add_column :bikes, :in_use, :boolean,  default: false
   
      
 
