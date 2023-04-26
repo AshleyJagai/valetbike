@@ -4,9 +4,9 @@ class Station < ApplicationRecord
                            :address
   validates_uniqueness_of  :identifier
 
-  has_many :bikes
+  #has_many :bikes
   
-  #has_many :docked_bikes, class_name: :Bike, foreign_key: :current_station_id
+  has_many :docked_bikes, class_name: :Bike, foreign_key: :current_station_identifier
 
   def to_param
     identifier
