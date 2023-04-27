@@ -7,7 +7,7 @@ Station name: <%= @station.name %> <br>
  
  <% bikes = Bike.where(current_station_identifier: @station.identifier ) %>
  <%bikes.each do |bike| %>
-  <br>
+  <br>
  <%= bike.identifier%>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25,4 +25,11 @@ Station name: <%= @station.name %> <br>
 
 
 <br><br><br>
+<<<<<<< HEAD
  note: the rails id of this station is <%= @station.id %>
+=======
+ note: the rails id of this station is <%= @station.id %>
+
+
+      
+>>>>>>> 5134e1e (pulling design changes)
