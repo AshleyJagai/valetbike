@@ -2,7 +2,9 @@ header {
     padding:.82em;
     line-height: 1.9;
     background: #b4a9da;
-    font-size: 20px;
+    font-size: 35px;
+    margin-left: 3%;
+    font-family: monospace;
 }
 
 #slogan {

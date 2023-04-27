@@ -2,6 +2,7 @@
 /*       Universal Page Style       */
 /************************************/
 
+<<<<<<< HEAD
 .page-section {
   max-width: 80em;
   width: 100%;
@@ -18,11 +19,17 @@
 .mylinks{
   overflow-x: hidden;
 }
+=======
+>>>>>>> 237be91 (better version 2.0)
 
 body,
 html {
   margin: 0;
+<<<<<<< HEAD
   font-family: palatino;
+=======
+  font-family: sans-serif;
+>>>>>>> 237be91 (better version 2.0)
 }
 
 a {
