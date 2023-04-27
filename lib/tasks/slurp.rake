@@ -3,7 +3,7 @@ namespace :slurp do
   task stations: :environment do
     require 'csv'    
 
-      csv_text = File.read("/Users/mac/Ashley/valetbike/notes/station-data.csv")
+      csv_text = File.read("/Users/jannetmartinez/Desktop/ashleyvaletbike/valetbike/notes/station-data.csv")
 
   csv = CSV.parse(csv_text, :headers => true, :encoding => "ISO-8859-1")
   csv.each do |row|

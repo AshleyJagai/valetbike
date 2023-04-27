@@ -25,17 +25,11 @@ html {
   font-family: palatino;
 }
 
-.container {
-  display: flex;
-  gap: 0.625%;
-}
-
 a {
   flex: 1;
   text-decoration: none;
   outline: none;
   text-align: center;
-  line-height: 3;
   border-radius: 4px;
   color: black;
 }
@@ -58,7 +52,7 @@ a:active {
 }
 
 #mySidebar {
-  height: 825px; /* 100% Full-height */
+  height: 174%; /* 100% Full-height */
   position: absolute; /* Stay in place */
   z-index: 1; /* Stay on top */
   top: 0;
@@ -66,12 +60,13 @@ a:active {
   background-color: #93AE90; 
   padding-top: 0px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+  line-height:3.15;
 }
 
 /* The sidebar links */
 .sidebar a {
   overflow-x: hidden; /* Disable horizontal scroll */
-  padding: 10px 0px 0px 10px; 
+  padding: 10px 0px 0px 0px; 
   text-decoration: none;
   font-size: 20px;
   color:black;
@@ -110,10 +105,10 @@ a:active {
   cursor: pointer;
   background-color: #b4a9da;
   color: black;
-  padding: 39px 20px; /*moves the background square down, makes background color wider*/
+  padding: 50px 20px; /*moves the background square down, makes background color wider*/
   border: none;
   display: block;
-  height: 120px;
+  height: 162.5px;
 }
 .sidebarLogo{
   width: 120px;
@@ -125,12 +120,6 @@ a:active {
   background-color: #b4a9da;
 }
 
-
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-#main {
-  transition: margin-left .5s; /* If you want a transition effect */
-  padding: 5px;
-}
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {

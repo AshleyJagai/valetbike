@@ -10,6 +10,7 @@
 
 html, body {
   height: 100%;
+
 }
 
 body {
@@ -21,16 +22,16 @@ body {
   -webkit-text-size-adjust:100%;
   -moz-text-size-adjust:100%;
   -ms-text-size-adjust:100%;
+ 
 }
 
 #site-container{
-  position: relative;
+  position: absolute;
   width: 100%;
-  height: 100%;
   height: auto !important;
-  min-height: 100%;
   font-family: var(--body-font);
   font-weight: 400;
   color: var(--black-color);
   background: var(--white-color);
+
 }
