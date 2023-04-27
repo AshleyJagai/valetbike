@@ -4,10 +4,17 @@
   
   <h2> Lets Scoot! </h2>
 
+<<<<<<< HEAD
     <% if logged_in? %>
     <h1>You are Logged In, <%= current_user.username =%></h1>
     <%end%>
     <h2> would you like a tutorial? </h2>
+=======
+  <% if logged_in? %>
+    <h1>You are Logged In, <%= current_user.username %></h1>
+  <%end%>
+  <h2> would you like a tutorial? </h2>
+>>>>>>> 40a3689 (merging design into merge branch)
 
     <nav class="container">
       <a href="#"> <p> <%= link_to "YES", "/main/tutorial"%>  <p> </a> <br/>
