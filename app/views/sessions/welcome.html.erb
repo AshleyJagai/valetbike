@@ -4,22 +4,23 @@
   
   <h2> Lets Scoot! </h2>
 
-  <% if logged_in? %>
-    <h1>You are Logged In, <%= current_user.username %></h1>
-  <%end%>
-  <h2> would you like a tutorial? </h2>
+    <% if logged_in? %>
+    <h1>You are Logged In, <%= current_user.username =%></h1>
+    <%end%>
+    <h2> would you like a tutorial? </h2>
 
-  <nav class="container">
-    <a href="#"> <p> <%= link_to "YES", "/main/tutorial"%>  <p> </a> <br/>
+    <nav class="container">
+      <a href="#"> <p> <%= link_to "YES", "/main/tutorial"%>  <p> </a> <br/>
 
-    <a href="#"> <p> <%= link_to "NO", "/sessions/new"%> <p> </a> </br>
+      <a href="#"> <p> <%= link_to "NO", "/sessions/new"%> <p> </a> </br>
 
-    <a href="#"> <p> <%= link_to "help", "/main/help"%> <p> </a>
-  </nav>
+      <a href="#"> <p> <%= link_to "help", "/main/help"%> <p> </a>
+    </nav>
 
   <div>
-
+    <div>
+    
   </div>
-  <br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/>
 </div>
 
