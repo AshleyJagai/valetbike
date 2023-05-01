@@ -9,35 +9,17 @@ Station name: <%= @station.name %> <br>
  <%bikes.each do |bike| %>
   <br>
  <%= bike.identifier%>
-<<<<<<< HEAD
- <%= link_to("click here to rent this bike", new_rental_path(bike: bike.id, station: @station.id)) %>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
- <%= link_to("click here to rent this bike", new_rental_path(bike: bike.id, station: @station.id)) %>
-=======
- <%= link_to("click here to rent this bike", new_rental_path(bike: bike.identifier, station: @station.identifier)) %>
->>>>>>> 8df6771 (display station&bike identifier but nothing with return)
-=======
- <%= link_to("click here to rent this bike", new_rental_path(bike: bike.id, station: @station.id)) %>
->>>>>>> 1162179 (fix rental fr fr)
->>>>>>> db7694b (pulling design changes)
+ <%= link_to("click here to rent this bike", new_rental_path()) %>
  <% end%>
 
 
 
 
 
+
+
+
+
+
 <br><br><br>
-<<<<<<< HEAD
-<<<<<<< HEAD
  note: the rails id of this station is <%= @station.id %>
-=======
- note: the rails id of this station is <%= @station.id %>
-
-
-      
->>>>>>> 5134e1e (pulling design changes)
-=======
- note: the rails id of this station is <%= @station.id %>
->>>>>>> ca5601f (pulling design changes)
