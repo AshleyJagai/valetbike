@@ -23,6 +23,7 @@ class UsersController < ApplicationController
       flash[:success] = "Profile updated"
       redirect_to '/users/profile'
     else
+      #show_validation_errors(@user)
       render ('edit')
     end
   end

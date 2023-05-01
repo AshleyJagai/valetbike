@@ -4,7 +4,6 @@ class ApplicationController < ActionController::Base
     helper_method :current_user
     helper_method :current_bike
     
-    
     def current_user
         if @current_user.nil?
             @current_user = User.find_by(id: session[:user_id])
@@ -12,12 +11,6 @@ class ApplicationController < ActionController::Base
             @current_user
         end
     end
-
-
-
-
-
-
 
     def logged_in?
         # byebug
@@ -28,6 +21,18 @@ class ApplicationController < ActionController::Base
     def authorized
         redirect_to '/index' unless logged_in?
      end
+
+    # def weee 
+    #     render(partial: 'layouts/_error_messages', {}
+    # end 
+
+
+    
+
+
+
      def show
      end
+
+    
 end

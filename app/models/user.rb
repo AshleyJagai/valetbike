@@ -10,6 +10,8 @@ class User < ApplicationRecord
     validates_length_of :username, minimum: 1 
 
     validates_presence_of :email
+    validates_uniqueness_of :email 
+
 
     validates_presence_of :phone_number
 

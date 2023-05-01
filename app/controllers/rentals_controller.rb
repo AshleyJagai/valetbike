@@ -25,7 +25,6 @@ class RentalsController < ApplicationController
             puts "saved"
             @current_bike = Bike.where(id: @rental.bike_id )
             @current_bike.update(current_station_identifier: 0, status: 1) 
-            
 
             #puts params[:bike_id]
             #bikes = Bike.where(current_station_identifier: @station.identifier )
@@ -42,6 +41,58 @@ class RentalsController < ApplicationController
             render('new') 
             puts "save failed"
         end
+    
+    def update
+        @rental = Rental.find(params[:id])
+        puts "HELLLO"
+        if @rental.update(params.require(:rental).permit(:user_id, :bike_id, :start_station_id, :end_station_id, :end_time, :price, :start_time, :end_time ))
+            @current_bike = Bike.where(id: @rental.bike_id ) #update bike location
+            puts "CURRENT BIKE:"
+            puts @current_bike 
+    
+            #updates current_station identifier on bike 
+            @current_bike.update(current_station_identifier: @rental.end_station_id, status: 0) 
+            #puts @current_bike.current_station_identifier 
+
+            @u = User.where(id: @rental.user_id)
+            puts @u
+            #puts @u.username
+            puts "charging"
+            @u.update(credit: 0 )
+            
+            #put @u.credit
+
+            #charge user credits. this needs to eventually look at the  amount of time the bike was out, mutliply it by something
+            # and then subtract that number from the users credits. should this be a user action?
+`   `
+            
+            # @user = current_user
+            # puts "CURRENT USER:"
+             
+            # puts @user.class 
+            # puts @user.username
+            #puts @current_user.username 
+            # @user = current_user
+            # puts @user
+            # puts @user.credit 
+            # @user.update(credit: 1.000000000) 
+            # puts @user.credit
+            # puts @rental.user.credit
+            # @rental.user.update(credit: 10.0) 
+            # puts @rental.user.credit
+
+            #@user.update(credit: 19)
+        flash[:success] = "Your scooter is successfully returned!"
+        redirect_to '/index'
+        else
+            puts 'update failed'
+            render ('edit')
+        end
+    end
+    
+    def edit
+        @rental = Rental.find(params[:id])
+    end
 
 
        #@rental = Rental.create(params.require(:user_id).permit(:user_id, :bike_id, :start_time, :start_station_id,))

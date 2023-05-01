@@ -1,6 +1,10 @@
 <div>
   <h1 Edit My Profile </h1>
 
+
+<% show_validation_errors(@user)%>
+
+  
 <%= form_for @user do |f|%>
   <%= f.label :username%><br>
   <%= f.text_field :username%><br>
@@ -20,6 +24,7 @@
 
 
 <%end%>
+
 
 
 </div>
