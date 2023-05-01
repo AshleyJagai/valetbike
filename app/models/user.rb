@@ -10,6 +10,7 @@ class User < ApplicationRecord
     validates_length_of :username, minimum: 1 
 
     validates_presence_of :email
+    validates_uniqueness_of :email 
 
     validates_presence_of :phone_number
 
@@ -30,15 +31,27 @@ class User < ApplicationRecord
     #validate :age
 
 
-    #validates_
+    validates_presence_of :date_birth
+    validate :user_age 
 
-    # username 
-    #password 
-    #email 
-    #addy  
-    # phone number  #only numbers 
-    #credits # not being a number, less then zero, more then 2 decimal places 
+    #creds to this stack overflow post https://stackoverflow.com/questions/40457247/id-like-to-validate-a-birthdate-attribute-to-be-over-18-years-old 
 
+    def user_age 
+       if date_birth.present? && date_birth > 18.years.ago 
+            errors.add( :date_birth, 'you must be at least 18 years old to use valetscoot')
+    end 
+end
+
+
+#    validates "user age"
+
+#     private 
+
+#         def user_age 
+#             if age. 
+#                 errors.add(:attribute, "you must be at least 18 to use valetscoot")
+#             end 
+#         end 
     
     
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_11_001602) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_01_230127) do
   create_table "bikes", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.integer "identifier"
     t.integer "current_station_identifier"
@@ -48,6 +48,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_11_001602) do
     t.integer "docked_bike_count"
     t.string "bikes_at_station"
     t.boolean "is_full"
+    t.float "latitude"
+    t.float "longitude"
   end
 
   create_table "users", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -60,6 +62,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_11_001602) do
     t.string "phone_number"
     t.date "date_birth"
     t.decimal "credit", precision: 10
+    t.string "first_name"
+    t.string "last_name"
   end
 
   add_foreign_key "rentals", "bikes"

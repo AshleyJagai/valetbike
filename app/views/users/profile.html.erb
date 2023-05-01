@@ -1,12 +1,19 @@
 <div>
 <h1 class="font-bold text-4xl" id="profile1">Profile</h1>
   
-  <strong>Name:</strong><%=current_user.username.upcase%><br>
+  <strong>First name:</strong><%=current_user.first_name.capitalize%><br>
+  <strong>Last Name:</strong><%=current_user.last_name.capitalize%><br>
+  <strong>Username:</strong><%=current_user.username.upcase%><br>
   <strong>Phone Number:</strong><%=current_user.phone_number%><br>
   <strong>Date of Birth:</strong><%=current_user.date_birth%><br>
   <strong>Address:</strong><%=current_user.address%><br>
   <strong>Credits:</strong><%=current_user.credit%><br>
+
+  <p> You've been on <%= @current_user.rentals.size %> rides! <p>
+
   <p> <%= link_to("Edit My Profile",edit_user_path(current_user.id))%>  <p> <br/>
+
+
   
 </div>
 
