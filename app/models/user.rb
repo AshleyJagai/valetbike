@@ -25,8 +25,12 @@ class User < ApplicationRecord
     def user_age 
        if date_birth.present? && date_birth > 18.years.ago 
             errors.add( :date_birth, 'you must be at least 18 years old to use valetscoot')
-    end 
+     end 
     end
+
+   
+
+
 
     #validate :age
 
