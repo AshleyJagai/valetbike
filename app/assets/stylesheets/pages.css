@@ -100,12 +100,7 @@ a:active {
   top: 0%;
   position: absolute;
 }
-.sidebarSpacer{
-  width: 110px;
-  left:0%;
-  top: 0%;
-  position: absolute;
-}
+
 .openbtn:hover {
   background-color: #b4a9da;
 }
