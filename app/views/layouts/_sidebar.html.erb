@@ -6,13 +6,11 @@
   </div>
     <ul >
       <%if !logged_in?%>
-        <li> <%=link_to_unless_current("Create Account", "/users/new")%> </li>
-        <li> <%=link_to_unless_current("Log In", "/login")%> </li>
-      <%else%>
-        <li> <%=link_to_unless_current("Profile", "/users/profile")%></li>
-        <li> <%=link_to_unless_current("Rent a Bike", "/stations/index")%> </li>
-        <li><%=link_to_unless_current("See Map", "/stations/map")%></li>
-        <li>  <%=link_to('Log Out', controller: "sessions", action: "destroy") %> </li>
+      <li> <%=link_to_unless_current("Profile", "/users/profile")%></li>
+      <li> <%=link_to_unless_current("Rent a Bike", "/stations/index")%> </li>
+      <li><%=link_to_unless_current("Menu", "/stations/index")%></li>
+      <li> <%=link_to_unless_current("Return Bike", "/stations/index")%> </li>
+      <li>  <%=link_to('Log Out', controller: "sessions", action: "destroy") %> </li>
 
       <%end%>
 
