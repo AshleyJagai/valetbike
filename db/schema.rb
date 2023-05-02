@@ -25,8 +25,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_01_230127) do
     t.bigint "user_id", null: false
     t.integer "start_station_id"
     t.integer "end_station_id"
-    t.datetime "start_time"
-    t.datetime "end_time"
     t.integer "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -48,8 +46,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_01_230127) do
     t.integer "docked_bike_count"
     t.string "bikes_at_station"
     t.boolean "is_full"
-    t.float "latitude"
-    t.float "longitude"
   end
 
   create_table "users", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
