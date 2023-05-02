@@ -1,8 +1,11 @@
 <div class="record-row <%= cycle "odd", "even", name: "row-cycler" %> flexbox vertical stretch">
-  <%= station.identifier %>: <%= station.name %> (<%= station.address %>) 
-
-  <%= link_to("rent a bike from #{station.name}", station_path(station.id)) %>
- 
+  <%= station.identifier %>: <%= station.name %> (<%= station.address %>)  
+  <% bikes = Bike.where(current_station_identifier: station.identifier) %>
+  <% if (bikes.length == 0)%>
+    <%= link_to("No bikes here #{station.name}", station_path(station.id)) %>
+  <%else%>
+    <%= link_to("rent a bike from #{station.name}", station_path(station.id)) %>
+  <%end%>
 </div>
 
 

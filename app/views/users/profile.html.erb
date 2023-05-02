@@ -7,7 +7,7 @@
   <strong>Address:</strong><%=current_user.address%><br>
   <strong>Credits:</strong><%=current_user.credit%><br>
   <p> <%= link_to("Edit My Profile",edit_user_path(current_user.id))%>  <p> <br/>
-  
+  <p> <%= link_to("Rent/Return the bike?", '/stations/index')%>  <p> <br/>
 </div>
 
   <!--<p>Find me in app/views/users/profile.html.erb</p>

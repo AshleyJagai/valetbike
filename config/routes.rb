@@ -9,7 +9,6 @@ Rails.application.routes.draw do
 
   resources :users, only: [:new, :create, :edit, :update] 
   resources :rentals
-
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'
   # delete 'logout' to: 'sessions#delete'
@@ -30,10 +29,12 @@ Rails.application.routes.draw do
   # get 'main/menu'
   get 'main/help'
   get 'main/tutorial'
+  get 'main/thankyou'
   get 'sessions/destroy'
   get 'users/profile' 
   get 'sessions/new'
   get 'users/new'
+
   # get 'main/rent'
   # get 'main/return'
   # get 'main/return'
