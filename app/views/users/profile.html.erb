@@ -15,10 +15,6 @@
   <p> <%= link_to("Rent/Return the bike?", '/stations/index')%>  <p> <br/>
 </div>
 
-  <p> You've been on <%= @current_user.rentals.size %> rides! <p>
-
-  <p> <%= link_to("Edit My Profile",edit_user_path(current_user.id))%>  <p> <br/>
-
 
   
   <br/><br/><br/><br/><br/>
@@ -36,5 +32,6 @@
     <br/>
 
     
-  <p>Find me in app/views/users/profile.html.erb</p>
+<%# <p>Find me in app/views/users/profile.html.erb</p> %>
+
   
