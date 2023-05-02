@@ -8,6 +8,13 @@
   <strong>Date of Birth:</strong><%=current_user.date_birth%><br>
   <strong>Address:</strong><%=current_user.address%><br>
   <strong>Credits:</strong><%=current_user.credit%><br>
+  
+  <p> You've been on  <%= @current_user.rentals.size %> rides! <p>
+
+
+
+
+
   <p> <%= link_to("Edit My Profile",edit_user_path(current_user.id))%>  <p> <br/>
   <p> <%= link_to("Rent/Return the bike?", '/stations/index')%>  <p> <br/>
 </div>
