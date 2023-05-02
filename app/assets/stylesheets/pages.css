@@ -23,6 +23,8 @@ a:visited,
 a:focus {
   background: #93AE90;
   color: black;
+  display: inline-block;
+  
 }
 
 a:hover {
@@ -34,6 +36,32 @@ a:active {
   background: #71876f;
   color: white;
 }
+
+details{
+  background-color: #cad9c9;
+  color: #1f2c21;
+  font-size: 1rem;
+}
+summary {
+  padding: .5em 1.3rem;
+  justify-content: space-between;  
+  transition: height 1s ease;
+}
+
+.column {
+  float:left;
+  width: 33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  
+  content: "";
+  clear: both;
+  display: table;
+}
+
 
 #mySidebar {
   height: 174%; /* 100% Full-height */

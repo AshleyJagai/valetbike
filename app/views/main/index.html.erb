@@ -1,21 +1,21 @@
 <div>
 
   <h1 class="font-bold text-4xl" style="background-color:rgba(147, 174, 144, 0.5);">Welcome to ValleyScoot!</h1>
-
-  <h2 style="border:2px solid #93AE90"> Would you like a tutorial before you get started? </h2>
-
-  <h2> <%= link_to("YES- show me around", "main/tutorial")%>  <h2> <br/>
+  </br>
+  <h2 class="font-bold text-2xl" style="border:2px solid #93AE90"> Would you like a tutorial before you get started? </h2>
+  </br>
+  <h2> <%= link_to("‧ Yes, please show me around! ‧", "main/tutorial")%>  <h2> <br/>
 
   <%if !logged_in?%>
-    <h2><%= link_to("NO - I'm ready to scoot!", "/sessions/new")%></h2>
+    <h2><%= link_to("‧ No, I'm ready to scoot! ‧", "/sessions/new")%></h2>
   <%else%>
-    <h2><%= link_to("NO - I'm ready to scoot!", "/stations/map")%></h2>
+    <h2><%= link_to("‧ No, I'm ready to scoot! ‧", "/stations/map")%></h2></br>
   <%end%>
-  <h2> <%= link_to("help", "main/help")%> </h2>
+  <h2> <%= link_to("‧ I have some questions. I would like some help! ‧", "main/help")%> </h2>
 
   <br/>
 
-  <h2><b> About us:</b></h2>
+  <h2 class="font-bold text-2xl"><b> About us:</b></h2>
   <h2 style="border:2px solid #B4A9DA;" ><p style="text-indent: 25px;">Hi there! Our name is <b>ValleyScoot</b>! I am a scooter rental company based in Northampton, MA.
   At ValleyScoot, our mission is to provide a convenient, eco-friendly and affordable way for people to explore and enjoy the scenic views of Northampton.</p></br>
 
@@ -30,4 +30,16 @@
   <p style="text-indent: 25px;">Thank you for considering ValleyScoot for your scooter rental needs. We can't wait to help you discover the beauty of the Valley region!</p><br/></h2>
 
   <br/><br/><br/><br/><br/>
+  <div class="row">
+    <div class="column">
+      <img src = "/logo.jpg" alt = "PAJAS Logo" >
+    </div>
+    <div class="column">
+      <img src = "/logo.jpg" alt = "PAJAS Logo">
+    </div>
+    <div class="column">
+      <img src = "/logo.jpg" alt = "PAJAS Logo">
+    </div>
+  </div>
+    <br/>
 </div>
