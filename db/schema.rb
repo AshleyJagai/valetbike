@@ -48,8 +48,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_01_230127) do
     t.integer "docked_bike_count"
     t.string "bikes_at_station"
     t.boolean "is_full"
-    t.float "latitude"
-    t.float "longitude"
   end
 
   create_table "users", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
