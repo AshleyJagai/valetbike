@@ -3,7 +3,9 @@ class MainController < ApplicationController
   end
 
   def tutorial
-
+  end
+  
+  def thankyou
   end
 
   def help

@@ -2,8 +2,8 @@ class RentalsController < ApplicationController
     def new
         @rental = Rental.new
         #@current_time = Time.now 
-       
     end
+
 
     def show 
         @rental = Rental.find(params[:id])
@@ -73,7 +73,7 @@ class RentalsController < ApplicationController
 
             #@user.update(credit: 19)
         flash[:success] = "Your scooter is successfully returned!"
-        redirect_to '/index'
+        redirect_to 'main/thankyou'
         else
             puts 'update failed'
             render ('edit')
