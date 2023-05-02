@@ -16,7 +16,13 @@ class Rental < ApplicationRecord
   end 
 
   def pay
+      ## if enough credits to pay:
       user.update_attribute(:credit, user.credit - cost)
+      # else 
+        #option to add more credits 
+      #end 
+      
+
   end
 
   
