@@ -4,14 +4,18 @@ class User < ApplicationRecord
     has_many :bikes, through: :rentals 
 
     validates_presence_of :username
-    validates_length_of :username, minimum: 1 
+    validates_length_of :username, minimum: 8
+    validates_uniqueness_of :username 
 
     validates_presence_of :password
-    validates_length_of :username, minimum: 1 
+    validates_length_of :username, minimum: 8 
 
     validates_presence_of :email
+    validates_uniqueness_of :email
+
 
     validates_presence_of :phone_number
+    validates_length_of :phone_number, is: 10
 
     validates_presence_of :credit
     validates_numericality_of :credit, greater_than_or_equal_to: 0
@@ -23,8 +27,10 @@ class User < ApplicationRecord
 
     def user_age 
        if date_birth.present? && date_birth > 18.years.ago 
-            errors.add( :date_birth, 'you must be at least 18 years old to use valetscoot')
+        
+            errors.add( :date_birth, 'You must be at least 18 years or older to use ValetScoot')
      end 
+     
     end
 
    

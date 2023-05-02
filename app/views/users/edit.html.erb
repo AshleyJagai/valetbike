@@ -1,4 +1,15 @@
 <div>
+<% flash.each do |type, msg| %>
+  <div>
+    <ul>
+      <% m = msg.to_s.delete(msg.to_s[0]) %>
+      <% m = m.delete(msg.to_s[-1]) %> 
+      <% m = m.delete(m[0]) %> 
+
+      <%= m %> <br>
+    </ul>
+  </div>
+<% end %>
   <h1 Edit My Profile </h1>
 
 <%= form_for @user do |f|%>

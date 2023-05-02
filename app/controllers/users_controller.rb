@@ -10,7 +10,16 @@ class UsersController < ApplicationController
   def create
     @user = User.create(user_params)
     session[:user_id] = @user.id
-    redirect_to '/welcome'
+    if (logged_in?)
+      redirect_to '/welcome'
+    else
+      if @user.errors.any?
+          # puts @user.errors.full_messages.class
+          flash[:danger] = @user.errors.full_messages
+          redirect_to '/users/new'
+      end
+      
+    end
   end
   def profile
   end
@@ -23,7 +32,12 @@ class UsersController < ApplicationController
       flash[:success] = "Profile updated"
       redirect_to '/users/profile'
     else
-      render ('edit')
+      if @user.errors.any?
+        # puts @user.errors.full_messages.class
+        flash[:danger] = @user.errors.full_messages
+        render ('edit')
+    end
+      
     end
   end
 
@@ -35,6 +49,12 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:username, :password, :email, :address, :date_birth, :phone_number, :credit)
+  end
+
+  private
+
+  def user_params_no_password
+    params.require(:user).permit(:username, :email, :address, :date_birth, :phone_number, :credit)
   end
 end
 

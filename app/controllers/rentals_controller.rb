@@ -1,4 +1,5 @@
 class RentalsController < ApplicationController
+    
     def new
         @rental = Rental.new
         #@current_time = Time.now 
@@ -47,7 +48,7 @@ class RentalsController < ApplicationController
     
     def update
         @rental = Rental.find(params[:id])
-        puts "HELLLO"
+        # puts "HELLLO"
         if @rental.update(params.require(:rental).permit(:user_id, :bike_id, :start_station_id, :end_station_id, :end_time, :price, :start_time, :end_time ))
             @current_bike = Bike.where(id: @rental.bike_id ) #update bike location
             @current_bike.update(current_station_identifier: @rental.end_station_id, status: 0) 
