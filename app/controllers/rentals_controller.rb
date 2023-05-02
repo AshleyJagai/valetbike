@@ -73,7 +73,7 @@ class RentalsController < ApplicationController
 
             #@user.update(credit: 19)
         flash[:success] = "Your scooter is successfully returned!"
-        redirect_to 'main/thankyou'
+        redirect_to '/main/thankyou',allow_other_host: true
         else
             puts 'update failed'
             render ('edit')
